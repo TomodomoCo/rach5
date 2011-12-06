@@ -1,0 +1,51 @@
+// Variables
+
+$neue: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Arial, sans-serif;
+$palatino: "Palatino Linotype", "Book Antiqua", "Palatino", Georgia, serif;
+
+// Mixins
+
+@mixin imgrep {
+	text-indent: -10000in;
+	outline: none;
+}
+
+@mixin clear {
+	clear: both;
+}
+
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin border-radius-tl($radius-tl) {
+	-webkit-border-top-left-radius: $radius-tl;
+	-moz-border-radius-topleft: $radius-tl;
+	border-top-left-radius: $radius-tl;
+}
+
+@mixin border-radius-tr($radius-tr) {
+	-webkit-border-top-right-radius: $radius-tr;
+	-moz-border-radius-topright: $radius-tr;
+	border-top-right-radius: $radius-tr;
+}
+
+@mixin border-radius-bl($radius-bl) {
+	-webkit-border-bottom-left-radius: $radius-bl;
+	-moz-border-radius-bottomleft: $radius-bl;
+	border-bottom-left-radius: $radius-bl;
+}
+
+@mixin border-radius-br($radius-br) {
+	-webkit-border-bottom-right-radius: $radius-br;
+	-moz-border-radius-bottomright: $radius-br;
+	border-bottom-right-radius: $radius-br;
+}
+
+@mixin opacity($value) {
+	-moz-opacity: $value;
+	opacity:$value;
+	filter: alpha(opacity=$value*100);
+}
