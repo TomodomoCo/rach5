@@ -4,18 +4,24 @@ if ( 'HTTP/1.1' != $protocol && 'HTTP/1.0' != $protocol )
         $protocol = 'HTTP/1.0';
 header( "$protocol 503 Service Unavailable", true, 503 );
 header( 'Content-Type: text/html; charset=utf-8' );
+
+// Redefining the bloginfo function, for forward compatibility
+function bloginfo($name) {
+	// Name your site
+	echo 'Website Name';
+}
 ?>
 <!DOCTYPE HTML>
 <html lang="en-US">
 	<head>
 		<meta charset="UTF-8">
 		<title><?php bloginfo('name'); ?> Coming Soon</title>
-		<link rel="stylesheet" type="text/css" href="http://www.vanpattenmedia.com/assets/css/style.css" media="all" />
-		<link rel="stylesheet" href="http://www.vanpattenmedia.com/assets/js/libs/formalize/css/formalize.css" />
+		<link rel="stylesheet" type="text/css" href="http://cdn.vanpattenmedia.com/css/style.css" media="all" />
+		<link rel="stylesheet" href="http://cdn.vanpattenmedia.com/js/libs/formalize/css/formalize.css" />
 		<script type="text/javascript">
 		
 		  var _gaq = _gaq || [];
-		  _gaq.push(['_setAccount', 'UA-575101-XX']);
+		  _gaq.push(['_setAccount', 'UA-XXXXXX-XX']);
 		  _gaq.push(['_trackPageview']);
 		
 		  (function() {
@@ -44,12 +50,11 @@ header( 'Content-Type: text/html; charset=utf-8' );
 		</div>
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
-		<script>!window.jQuery && document.write(unescape('%3Cscript src="http://www.vanpattenmedia.com/assets/js/libs/jquery-1.5.min.js"%3E%3C/script%3E'))</script>
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js" type="text/javascript"></script>
 		
-		<script src="http://www.vanpattenmedia.com/assets/js/formalize/js/jquery.formalize.min.js"></script>
-		<script src="http://www.vanpattenmedia.com/assets/js/formalize/js/jquery.placeholder.js"></script>
+		<script src="http://cdn.vanpattenmedia.com/js/libs/formalize/js/jquery.formalize.min.js"></script>
+		<script src="http://cdn.vanpattenmedia.com/js/libs/jquery.placeholder.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function() {
 				$('#submit').click(function () {        
