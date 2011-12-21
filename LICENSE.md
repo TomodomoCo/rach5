@@ -1,23 +1,3 @@
-# Rach5
-
-### Contents
-*   What is it?
-*   Why should I care?
-
-### What is Rach5?
-*Rach5* (that's _Rach_ as in _Rach_-maninov) is a WordPress theme boilerplate developed by Chris Van Patten for Van Patten Media.
-
-### Why should I care?
-Frankly, you probably shouldn't. It seemed like a nice, non-offensive way to kick off our GitHub page though.
-
-### What do I need?
-*Rach5* requires the following Ruby gems...
-*   <a href="http://compass-style.org/">Compass</a>
-*   <a href="http://rubygems.org/gems/net-ssh">Net-SSH</a>
-*   <a href="http://rubygems.org/gems/net-sftp">Net-SFTP</a>
-
-And of course you need WordPress, as this is all pretty useless without it.
-
 ### License
 *Copyright (C) 2011 Chris Van Patten.*
 
