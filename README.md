@@ -20,7 +20,7 @@ Frankly, you probably shouldn't. It seemed like a nice, non-offensive way to kic
 And of course you need WordPress, as this is all pretty useless without it.
 
 ### TODO
-*   I have a bunch of fancy functions I reference in functions.php that I need to reinclude
+*   <del>I have a bunch of fancy functions I reference in functions.php that I need to reinclude</del>
 *   Comments, as they stand now, don't exist in public/are a mess in private.
     *   I have problems with including presentational functions in functions.php, which is how it's currently done in WordPress. There have to be ways to navigate around that...
 *   There are some new Ruby gem requirements that need to be noted
