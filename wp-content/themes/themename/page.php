@@ -1,15 +1,15 @@
 <?php get_header(); ?>
 	
-	<div id="posts">
+	<section id="posts">
 	
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		
-			<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			
 				<h2><?php the_title(); ?></h2>
 				<?php the_content('Read More &raquo;'); ?>
 				
-			</div>
+			</article>
 			
 		<?php endwhile; ?>
 			
@@ -20,6 +20,6 @@
 			
 		<?php endif; ?>
 		
-	</div>
+	</section>
 
 <?php get_footer(); ?>
