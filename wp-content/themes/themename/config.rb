@@ -13,12 +13,10 @@ remote_theme_dir_absolute = '/path/to/website.tld/wp-content/themes/themename/cs
 # Development
 output_style	= :expanded
 line_comments	= true
-environment		= :development
 
 # Production
 # line_comments	= false
 # output_style	= :compressed
-# environment		= :production
 
 # To enable relative paths to assets via compass helper functions. Uncomment:
 # relative_assets = true
