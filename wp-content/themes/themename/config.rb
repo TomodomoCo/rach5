@@ -32,7 +32,7 @@ on_stylesheet_saved do |filename|
 	$local_path_to_css_file = css_dir + '/' + File.basename(filename)
 	
 	Net::SFTP.start( sftp_host, sftp_user, :password => sftp_pass ) do |sftp|
-		sftp.upload! $local_path_to_css_file, remote_theme_dir_absolute + '/' css_dir + '/' + File.basename(filename)
+		sftp.upload! $local_path_to_css_file, remote_theme_dir_absolute + '/' + css_dir + '/' + File.basename(filename)
 	end
 	puts ">>> File uploaded."
 end
