@@ -1,12 +1,12 @@
 <?php
 
-//////////////////////////////////////////////////
+// ------------------------------------------------------------ //
 //
-//    Rach5 custom functions.php
-//    
+//    Rach5 Functions
+//    Customize wp-admin
 //    http://github.com/vanpattenmedia/rach5
 //
-//////////////////////////////////////////////////
+// ------------------------------------------------------------ //
 
 // Disable admin bar
 add_filter( 'show_admin_bar', '__return_false' );
@@ -24,7 +24,7 @@ function filter_footer_admin() {
 }
 add_filter('admin_footer_text', 'filter_footer_admin');
 
-// Custom admin dashboard
+// Custom admin dashboard widgets
 function remove_dashboard_widgets() {
 	global $wp_meta_boxes;
 	
@@ -43,22 +43,6 @@ function remove_dashboard_widgets() {
 }
 add_action('wp_dashboard_setup', 'remove_dashboard_widgets' );
 
-// Fix homepage body class
-function strip_page_from_body_class($classes, $class){
-	global $post;
-	if ( !is_front_page() ){
-		return $classes;
-	} else {
-		foreach ($classes as &$str) {
-			if (strpos($str, "page") > -1) {
-				$str = "";
-			}
-		}
-	}
-	return $classes;
-}
-add_filter("body_class", "strip_page_from_body_class", 10, 2);
-
 // Hide TinyMCE status bar
 function __my_tiny_mce( $config )
 {
@@ -66,16 +50,6 @@ function __my_tiny_mce( $config )
     return $config;
 }
 add_filter('tiny_mce_before_init', '__my_tiny_mce');
-
-// Hide generator tags, manifests, and extra RSS links
-remove_action('wp_head', 'wlwmanifest_link');
-remove_action('wp_head', 'rsd_link');
-remove_action('wp_head', 'wp_generator');
-remove_action('wp_head', 'feed_links_extra', 3);
-
-// remove WordPress version from RSS feeds
-function disable_version() { return ''; }
-add_filter('the_generator','disable_version');
 
 // Disable online plugin and theme edits
 define('DISALLOW_FILE_EDIT',true);
