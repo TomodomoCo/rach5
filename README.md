@@ -2,32 +2,25 @@
 
 ### Contents
 *   What is it?
-*   Why should I care?
-*   What do I need?
+*   Getting started
 *   TODO
+*   What's done
 *   License (Modified 3-Clause BSD)
 
 ### What is Rach5?
-**Rach5** (that's _Rock_ as in _Rach_-maninov) is a WordPress theme boilerplate developed by Chris Van Patten for Van Patten Media.
+**Rach5** (that's pronounced _Rock_ as in _Rach_-maninov) is a WordPress theme boilerplate developed by Chris Van Patten for Van Patten Media.
 
-### Why should I care?
-Frankly, you probably shouldn't. It seemed like a nice, non-offensive way to kick off our GitHub page though.
-
-### What do I need?
-**Rach5** requires the following Ruby gems...
-
-*   <a href="http://compass-style.org/">Compass</a>
-*   <a href="http://rubygems.org/gems/net-ssh">Net-SSH</a>
-*   <a href="http://rubygems.org/gems/net-sftp">Net-SFTP</a>
-*   <a href="https://github.com/aaronrussell/compass-rgbapng">rgbapng</a>
-
-And of course you need WordPress, as this is all pretty useless without it.
+Rach5 provides a set of "sensible defaults" that make it faster to jump into developing a custom WordPress website, and get right out of your way as quickly as possible by not imposing any (well, almost any) style decisions. Rach5 uses HTML5, Ruby and Compass, and a mix of WordPress native and custom functions that make theme development fast and fun.
 
 ### Getting started
-It's easy! Follow along:
+It's easy to get started with Rach5! Follow along:
 
 1.  Install Ruby and RubyGems
-2.  Install the required gems (see above for a list)
+2.  Install the required gems
+	*   <a href="http://compass-style.org/">Compass</a>
+	*   <a href="http://rubygems.org/gems/net-ssh">Net-SSH</a>
+	*   <a href="http://rubygems.org/gems/net-sftp">Net-SFTP</a>
+	*   <a href="https://github.com/aaronrussell/compass-rgbapng">rgbapng</a>
 3.  Edit the following files so your Rach5 setup reflects you:
     *   humans.txt
     *   config.rb
@@ -45,14 +38,14 @@ It's easy! Follow along:
 *   Moar HTML5!
 *   Logo!
 
-### DONE
-*   I borrowed lots (and modified it all) from Roots, a great WordPress theme framework. I like Roots a lot, but it's not suited for my purposes... I need something lighter, that makes fewer assumptions on what settings I need, which is why I am developing Rach5. Still, it has a lot of great features, and I've incorporated a small chunk into Rach5.
+### What's done
+*   **28 January 2012:** I borrowed lots (and modified it all) from Roots, a great WordPress theme framework. I like Roots a lot, but it's not suited for my purposes... I need something lighter, that makes fewer assumptions on what settings I need, which is why I am developing Rach5. Still, it has a lot of great features, and I've incorporated a small chunk into Rach5.
 *   <del>I have a bunch of fancy functions I reference in functions.php that I need to reinclude</del>
-    *   They're back and they're awesome.
+    *   **28 January 2012:** They're back and they're awesome.
 *   <del>As of now I don't include any responsive components, because I don't want to get involved in endorsing any CSS frameworks or anything. I think I could avoid that by writing some basic media queries and throwing them in a SASS file, which is what I often do anyway.</del>
-    *   I'm not explicitly including any full frameworks, but I have decided to include the responsive media queries from <a href="http://getskeleton.com/">Skeleton</a>. Skeleton is licensed under the <a href="http://www.opensource.org/licenses/mit-license.php">MIT license</a>.
+    *   **28 January 2012:** I'm not explicitly including any full frameworks, but I have decided to include the responsive media queries from <a href="http://getskeleton.com/">Skeleton</a>. Skeleton is licensed under the <a href="http://www.opensource.org/licenses/mit-license.php">MIT license</a>.
 *   <del>There are some new Ruby gem requirements that need to be noted</del>
-    *   rgbapng is now noted prominently. Things will probably break if you are without it.
+    *   **28 January 2012:** rgbapng is now noted prominently. Things will probably break if you are without it.
 
 ### License
 **Copyright (C) 2011, Chris Van Patten.**
