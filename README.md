@@ -1,11 +1,5 @@
 # Rach5
 
-### Contents
-*   What is it?
-*   Getting started
-*   Todo List/What's Done
-*   License (Modified 3-Clause BSD)
-
 ### What is Rach5?
 **Rach5** (that's pronounced _Rock_ as in _Rach_-maninov) is a WordPress theme boilerplate developed by Chris Van Patten for Van Patten Media.
 
