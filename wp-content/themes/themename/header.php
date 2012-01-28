@@ -1,20 +1,14 @@
-<!DOCTYPE html>
-<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
-<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
-<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 <head>
 	<meta charset="UTF-8">
 	<title><?php wp_title(''); ?></title>
 	
-	<!-- Credits -->
+	<?php /* Credits */ ?>
 	<link rel="author" href="humans.txt">
 	
-	<!-- CSS -->
+	<?php /* CSS */ ?>
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/style.css" media="all">
 	
-	<!-- JavaScript Fun For Everyone! -->
+	<?php /* JavaScript Fun For Everyone! */ ?>
 	<script type="text/javascript" src="http://cdn.vanpattenmedia.com/js/libs/LAB.min.js"></script>
 	<script type="text/javascript">
 		$LAB
@@ -26,7 +20,17 @@
 	
 	<?php wp_head(); ?>
 	
-	<!-- Analytics -->
+	<?php /* OpenGraph */ ?>
+	<meta property="og:locale" content="en_US">
+	<meta property="fb:admins" content="1366500013">
+	<meta property="og:title" content="<?php wp_title(''); ?>">
+	<meta property="og:url" content="<?php bloginfo('url'); ?>">
+	<meta property="og:site_name" content="<?php bloginfo('name'); ?>"/>
+	<meta property="og:type" content="article">
+	<meta property="og:description" content="<?php bloginfo('description'); ?>">
+	<meta property="og:image" content="<?php bloginfo('template_directory'); ?>/img/opengraph.png">
+	
+	<?php /* Analytics */ ?>
 	<script type="text/javascript">
 	
 	  var _gaq = _gaq || [];
@@ -41,4 +45,3 @@
 	
 	</script>
 </head>
-<body <?php body_class(); ?>>
