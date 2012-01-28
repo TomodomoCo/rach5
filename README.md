@@ -23,10 +23,11 @@ And of course you need WordPress, as this is all pretty useless without it.
 *   <del>I have a bunch of fancy functions I reference in functions.php that I need to reinclude</del>
 *   Comments, as they stand now, don't exist in public/are a mess in private.
     *   I have problems with including presentational functions in functions.php, which is how it's currently done in WordPress. There have to be ways to navigate around that...
-*   There are some new Ruby gem requirements that need to be noted
+*   <del>There are some new Ruby gem requirements that need to be noted</del>
 *   I need to rethink SASS organization. /includes, /structure, and /pages are a good start but could be more flexible
 *   Moar HTML5.
-*   As of now I don't include any responsive components, because I don't want to get involved in endorsing any CSS frameworks or anything. I think I could avoid that by writing some basic media queries and throwing them in a SASS file, which is what I often do anyway.
+*   <del>As of now I don't include any responsive components, because I don't want to get involved in endorsing any CSS frameworks or anything. I think I could avoid that by writing some basic media queries and throwing them in a SASS file, which is what I often do anyway.</del>
+    *   I'm not explicitly including any full frameworks, but I have decided to include the responsive media queries from <a href="http://getskeleton.com/">Skeleton</a>. Skeleton is licensed under the <a href="http://www.opensource.org/licenses/mit-license.php">MIT license</a>.
 *   Logo!
 
 ### License
