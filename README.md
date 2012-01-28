@@ -16,6 +16,7 @@ Frankly, you probably shouldn't. It seemed like a nice, non-offensive way to kic
 *   <a href="http://compass-style.org/">Compass</a>
 *   <a href="http://rubygems.org/gems/net-ssh">Net-SSH</a>
 *   <a href="http://rubygems.org/gems/net-sftp">Net-SFTP</a>
+*   <a href="https://github.com/aaronrussell/compass-rgbapng">rgbapng</a>
 
 And of course you need WordPress, as this is all pretty useless without it.
 
