@@ -4,11 +4,11 @@ require 'net/sftp'
 require 'rgbapng'
 
 # Config
-http_path		= "/"
 css_dir			= "css"
 sass_dir		= "sass"
 images_dir		= "img"
 javascripts_dir	= "js"
+
 remote_theme_dir_absolute = '/path/to/website.tld/wp-content/themes/themename'
 
 # Development
