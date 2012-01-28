@@ -34,7 +34,7 @@ It's easy! Follow along:
     *   style.css
 4.  Install WordPress and set up a permalink structure (we don't do it for you)
 5.  Upload Rach5
-    *   A word of warning: *do _not_ under _any circumstances_ upload config.rb* &emdash; your password is in there!
+    *   A word of warning: **do _not_ under _any circumstances_ upload config.rb** – your password is in there!
 6.  Activate Rach5
 7.  Enjoy Rach5!
 
