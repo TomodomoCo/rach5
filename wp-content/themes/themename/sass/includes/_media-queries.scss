@@ -1,0 +1,137 @@
+// Smaller than standard 960 (devices and browsers)
+@media only screen and (max-width: 959px) {
+	#slogan {
+		font-size: 32px;
+	}
+	
+	.widget {
+		margin-top: 10px;
+	}
+	
+	#fb, #tw {
+		width: 189px;
+	}
+	
+	#fp-email-signup {
+		input[type="email"] {
+			font-size: 18px;
+		}
+		
+		input[type="submit"] {
+			font-size: 16px;
+			float: right;
+		}
+	}
+}
+
+// Tablet Portrait size to standard 960 (devices and browsers)
+@media handheld, only screen and (min-width: 768px) and (max-width: 959px) {
+
+}
+
+// All Mobile Sizes (devices and browser)
+@media handheld, only screen and (max-width: 767px) {
+	#header {
+		height: 455px;
+		
+		.container {
+			height: 455px;
+		}
+	}
+	
+	#logo {
+		a {
+			width: 480px;
+			height: 328px;
+		}
+		
+		img {
+			max-width: 480px;	
+		}
+	}
+	
+	#fb, #tw {
+		width: 169px;
+	}
+}
+
+// Mobile Landscape Size to Tablet Portrait (devices and browsers)
+@media handheld, only screen and (min-width: 480px) and (max-width: 767px) {
+	#header {
+		height: 415px;
+		
+		.container {
+			height: 415px;
+		}
+	}
+	
+	#logo {
+		a {
+			width: 400px;
+		}
+		
+		img {
+			max-width: 400px;	
+		}
+	}
+	
+	.widget {
+		margin-top: 20px;
+	}
+	
+	h2 {
+		font-size: 24px;
+	}
+	
+	.left, .right {
+		@include opacity(0.6);
+	}
+}
+
+// Mobile Portrait Size to Mobile Landscape Size (devices and browsers)
+@media handheld, only screen and (max-width: 479px) {
+	#header {
+		height: 365px;
+		
+		.container {
+			height: 365px;
+		}
+	}
+	
+	#logo {
+		a {
+			width: 300px;
+			height: 205px;
+		}
+		
+		img {
+			max-width: 300px;	
+		}
+	}
+	
+	.left, .right {
+		@include opacity(0.5);
+	}
+	
+	#slogan {
+		font-size: 18px;
+	}
+	
+	h2 {
+		font-size: 20px;
+	}
+	
+	#fb, #tw {
+		width: 109px;
+	}
+	
+	#fp-email-signup {
+		input[type="email"] {
+			font-size: 18px;
+		}
+		
+		input[type="submit"] {
+			font-size: 16px;
+		}
+	}
+}
