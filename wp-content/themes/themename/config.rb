@@ -1,6 +1,7 @@
 # Require
 require 'net/ssh'
 require 'net/sftp'
+require 'rgbapng'
 
 # Config
 http_path		= "/"
@@ -8,7 +9,7 @@ css_dir			= "css"
 sass_dir		= "sass"
 images_dir		= "img"
 javascripts_dir	= "js"
-remote_theme_dir_absolute = '/path/to/website.tld/wp-content/themes/themename/css'
+remote_theme_dir_absolute = '/path/to/website.tld/wp-content/themes/themename'
 
 # Development
 output_style	= :expanded
@@ -31,7 +32,7 @@ on_stylesheet_saved do |filename|
 	$local_path_to_css_file = css_dir + '/' + File.basename(filename)
 	
 	Net::SFTP.start( sftp_host, sftp_user, :password => sftp_pass ) do |sftp|
-		sftp.upload! $local_path_to_css_file, remote_theme_dir_absolute + '/' + File.basename(filename)
+		sftp.upload! $local_path_to_css_file, remote_theme_dir_absolute + '/' css_dir + '/' + File.basename(filename)
 	end
 	puts ">>> File uploaded."
 end
