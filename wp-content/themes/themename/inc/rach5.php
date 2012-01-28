@@ -2,13 +2,14 @@
 
 // ------------------------------------------------------------ //
 //
-//    Rach5 custom functions.php
+//    Rach5 Functions
+//    Default functions set
 //    http://github.com/vanpattenmedia/rach5
 //
 // ------------------------------------------------------------ //
 
 // Fix homepage body class
-function strip_page_from_body_class($classes, $class){
+function strip_page_from_body_class($classes, $class) {
 	global $post;
 	if ( !is_front_page() ){
 		return $classes;
@@ -30,12 +31,13 @@ remove_action('wp_head', 'wp_generator');
 remove_action('wp_head', 'feed_links_extra', 3);
 
 // remove WordPress version from RSS feeds
-function disable_version() { return ''; }
+function disable_version() {
+	return '';
+}
 add_filter('the_generator','disable_version');
 
 // HTML5 compatible image caption
-function my_img_caption_shortcode_filter($val, $attr, $content = null)
-{
+function my_img_caption_shortcode_filter($val, $attr, $content = null) {
 	extract(shortcode_atts(array(
 		'id'	=> '',
 		'align'	=> '',

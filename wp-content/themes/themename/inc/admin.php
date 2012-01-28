@@ -44,8 +44,7 @@ function remove_dashboard_widgets() {
 add_action('wp_dashboard_setup', 'remove_dashboard_widgets' );
 
 // Hide TinyMCE status bar
-function __my_tiny_mce( $config )
-{
+function __my_tiny_mce( $config ) {
     $config['theme_advanced_statusbar_location'] = none;
     return $config;
 }
