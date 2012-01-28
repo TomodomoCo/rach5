@@ -3,8 +3,7 @@
 ### Contents
 *   What is it?
 *   Getting started
-*   TODO
-*   What's done
+*   Todo List/What's Done
 *   License (Modified 3-Clause BSD)
 
 ### What is Rach5?
@@ -12,43 +11,16 @@
 
 Rach5 provides a set of "sensible defaults" that make it faster to jump into developing a custom WordPress website, and get right out of your way as quickly as possible by not imposing any (well, almost any) style decisions. Rach5 uses HTML5, Ruby and Compass, and a mix of WordPress native and custom functions that make theme development fast and fun.
 
+For up-to-date documentation, visit the Rach5 website at <a href="http://labs.vanpattenmedia.com/projects/rach5/">Van Patten Media Labs</a> or the <a href="https://github.com/vanpattenmedia/rach5/wiki">Github Wiki</a> for the project.
+
 ### Getting started
-It's easy to get started with Rach5! Follow along:
+It's easy to <a href="https://github.com/vanpattenmedia/rach5/wiki/Getting-Started">get started with Rach5</a>! The full details are available at the wiki.
 
-1.  Install Ruby and RubyGems
-2.  Install the required gems
-	*   <a href="http://compass-style.org/">Compass</a>
-	*   <a href="http://rubygems.org/gems/net-ssh">Net-SSH</a>
-	*   <a href="http://rubygems.org/gems/net-sftp">Net-SFTP</a>
-	*   <a href="https://github.com/aaronrussell/compass-rgbapng">rgbapng</a>
-3.  Edit the following files so your Rach5 setup reflects you:
-    *   humans.txt
-    *   config.rb
-    *   style.css
-4.  Install WordPress and set up a permalink structure (we don't do it for you)
-5.  Upload Rach5
-    *   A word of warning: **do _not_ under _any circumstances_ upload config.rb** – your password is in there!
-6.  Activate Rach5
-7.  Enjoy Rach5!
-
-### TODO
-*   Comments, as they stand now, don't exist in public/are a mess in private.
-    *   I have problems with including presentational functions in functions.php, which is how it's currently done in WordPress. There have to be ways to navigate around that...
-*   I need to rethink SASS organization. /includes, /structure, and /pages are a good start but could be more flexible
-*   Moar HTML5!
-*   Logo!
-
-### What's done
-*   **28 January 2012:** I borrowed lots (and modified it all) from Roots, a great WordPress theme framework. I like Roots a lot, but it's not suited for my purposes... I need something lighter, that makes fewer assumptions on what settings I need, which is why I am developing Rach5. Still, it has a lot of great features, and I've incorporated a small chunk into Rach5.
-*   <del>I have a bunch of fancy functions I reference in functions.php that I need to reinclude</del>
-    *   **28 January 2012:** They're back and they're awesome.
-*   <del>As of now I don't include any responsive components, because I don't want to get involved in endorsing any CSS frameworks or anything. I think I could avoid that by writing some basic media queries and throwing them in a SASS file, which is what I often do anyway.</del>
-    *   **28 January 2012:** I'm not explicitly including any full frameworks, but I have decided to include the responsive media queries from <a href="http://getskeleton.com/">Skeleton</a>. Skeleton is licensed under the <a href="http://www.opensource.org/licenses/mit-license.php">MIT license</a>.
-*   <del>There are some new Ruby gem requirements that need to be noted</del>
-    *   **28 January 2012:** rgbapng is now noted prominently. Things will probably break if you are without it.
+### Todo List/What's Done
+See the wiki for the <a href="https://github.com/vanpattenmedia/rach5/wiki/Todo-List">todo list</a> and list of <a href="https://github.com/vanpattenmedia/rach5/wiki/What's-Done">completed items</a>.
 
 ### License
-**Copyright (C) 2011, Chris Van Patten.**
+**Copyright (C) 2011-2012, Chris Van Patten.**
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
