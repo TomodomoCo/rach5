@@ -4,7 +4,8 @@
 <!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
 <!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
-
+<html>
+<?php get_template_part('head'); ?>
 <?php get_header(); ?>
 <body <?php body_class(); ?>>
 
@@ -12,5 +13,4 @@
 	
 <?php get_footer(); ?>
 </body>
-
 </html>
