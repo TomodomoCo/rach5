@@ -2,60 +2,22 @@
 
 // ------------------------------------------------------------ //
 //
-//    Rach5 Functions
-//    Default functions set
-//    http://github.com/vanpattenmedia/rach5
+//    Rach5
+//    http://labs.vanpattenmedia.com/projects/rach5/
+//
+//    Functions: Master functions    
 //
 // ------------------------------------------------------------ //
 
-// Fix homepage body class
-function strip_page_from_body_class($classes, $class) {
-	global $post;
-	if ( !is_front_page() ){
-		return $classes;
-	} else {
-		foreach ($classes as &$str) {
-			if (strpos($str, "page") > -1) {
-				$str = "";
-			}
-		}
-	}
-	return $classes;
+// "stylesheet_link_tag," borrowed from Roots, inspired by Rails
+//
+// Options:
+//	$file		= Location of file
+//	$local		= Local or remote file? (e.g. include get_template_directory_uri() or not)
+//	$tabs		= Number of tabs to proceed the line
+//	$newline	= Add a newline after?
+//	$rel		= "stylesheet" by default, but you can change it if you want
+function stylesheet_link_tag($file, $local = true, $tabs = 0, $newline = true, $rel = 'stylesheet') {
+	$indent = str_repeat("\t", $tabs);
+	echo $indent . '<link rel="' . $rel .'" href="' . ($local ? get_template_directory_uri() . '/css' : '') . $file . '">' . ($newline ? "\n" : "");
 }
-add_filter("body_class", "strip_page_from_body_class", 10, 2);
-
-// Hide generator tags, manifests, and extra RSS links
-remove_action('wp_head', 'wlwmanifest_link');
-remove_action('wp_head', 'rsd_link');
-remove_action('wp_head', 'wp_generator');
-remove_action('wp_head', 'feed_links_extra', 3);
-
-// remove WordPress version from RSS feeds
-function disable_version() {
-	return '';
-}
-add_filter('the_generator','disable_version');
-
-// HTML5 compatible image caption
-function my_img_caption_shortcode_filter($val, $attr, $content = null) {
-	extract(shortcode_atts(array(
-		'id'	=> '',
-		'align'	=> '',
-		'width'	=> '',
-		'caption' => ''
-	), $attr));
-	
-	if ( 1 > (int) $width || empty($caption) )
-		return $val;
-
-	$capid = '';
-	if ( $id ) {
-		$id = esc_attr($id);
-		$capid = 'id="figcaption_'. $id . '" ';
-		$id = 'id="' . $id . '" ';
-	}
-
-	return '<figure ' . $id . 'class="wp-caption ' . esc_attr($align) . '">' . do_shortcode( $content ) . '<figcaption ' . $capid 
-	. 'class="wp-caption-text">' . $caption . '</figcaption></figure>';
-}
-add_filter('img_caption_shortcode', 'my_img_caption_shortcode_filter',10,3);
