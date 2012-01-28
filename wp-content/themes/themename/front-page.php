@@ -5,12 +5,12 @@
 <!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 <html>
-<?php get_template_part('head'); ?>
-<?php get_header(); ?>
+<?php get_template_part('head'); ?> 
 <body <?php body_class(); ?>>
+<?php get_header(); ?> 
 
 	<!-- Your stuff here -->
-	
-<?php get_footer(); ?>
+
+<?php get_footer(); ?> 
 </body>
 </html>
