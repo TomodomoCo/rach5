@@ -2,22 +2,24 @@
 	<meta charset="UTF-8">
 	<title><?php wp_title(''); ?></title>
 	
-	<?php /* Credits */ ?> 
-	<link rel="author" href="/humans.txt">
+	<?php /* Credits */ 
+	?><link rel="author" href="/humans.txt">
 	
 	<?php /* CSS (see inc/rach5.php for options) */
 		stylesheet_link_tag('/global.css', true, 0, false);
 	?>
 	
-	<?php /* Viewport for mobile */ ?> 
-	<meta name="viewport" content="width=device-width; initial-scale=1.0">
+	<?php /* Viewport for mobile */ 
+	?><meta name="viewport" content="width=device-width; initial-scale=1.0">
 	
-	<?php /* JavaScript Fun For Everyone! */ ?> 
+	<?php /* JavaScript Fun For Everyone! */ 
+	?><!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
 	<script type="text/javascript" src="//cdn.vanpattenmedia.com/js/libs/LAB.min.js"></script>
 	<script type="text/javascript">
 		$LAB
 		.script('//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js').wait()
-		.script('//cdn.vanpattenmedia.com/js/libs/jquery.placeholder.min.js').wait()
 		.script('//cdn.vanpattenmedia.com/js/libs/formalize/js/jquery.formalize.min.js').wait()
 		.script('<?php bloginfo('template_directory'); ?>/js/script.js').wait();
 	</script>
@@ -26,18 +28,22 @@
 		wp_head();
 	?>
 	
-	<?php /* OpenGraph */ ?> 
-	<meta property="og:locale" content="en_US">
-	<meta property="fb:admins" content="<?php /* Your FB ID here */ ?>">
+	<?php /* OpenGraph */ 
+	?><meta property="og:locale" content="en_US">
+	<meta property="fb:admins" content="<?php /* Facebook admin ID */ ?>">
 	<meta property="og:title" content="<?php wp_title(''); ?>">
-	<meta property="og:url" content="<?php bloginfo('url'); ?>">
-	<meta property="og:site_name" content="<?php bloginfo('name'); ?>"/>
-	<meta property="og:type" content="article">
-	<meta property="og:description" content="<?php bloginfo('description'); ?>">
-	<meta property="og:image" content="<?php bloginfo('template_directory'); ?>/img/opengraph.png">
+	<meta property="og:url" content="<?php echo get_permalink(); ?>">
+	<meta property="og:site_name" content="<?php bloginfo('name'); ?>">
+	<meta property="og:type" content="<?php if ( is_single() ) { echo 'article'; } else { echo 'website'; } ?>">
+	<meta property="og:description" content="<?php if ( !is_front_page() ) :
+		echo rach5_get_the_excerpt();
+	else : 
+		echo 'Long description of site.';
+	endif; ?>">
+	<meta property="og:image" content="<?php echo home_url(); bloginfo('template_directory'); ?>/img/opengraph.png">
 	
-	<?php /* Google Analytics */ ?> 
-	<script type="text/javascript">
+	<?php /* Google Analytics */ 
+	?><script type="text/javascript">
 		var _gaq = _gaq || [];
 		_gaq.push(['_setAccount', 'XX-XXXXXX-XX']);
 		_gaq.push(['_trackPageview']);
