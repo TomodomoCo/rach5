@@ -17,13 +17,18 @@ add_filter('get_avatar', 'rach5_remove_self_closing_tags');
 add_filter('comment_id_fields', 'rach5_remove_self_closing_tags');
 add_filter('post_thumbnail_html', 'rach5_remove_self_closing_tags');
 
+function rach5_remove_self_closing_tags_2( $content ) {
+    return str_replace( ' />', '>', $content );
+}
+add_filter( 'the_content', 'rach5_remove_self_closing_tags_2', 25 );
+
 // HTML5 compatible image caption
 function rach5_img_caption_shortcode($val, $attr, $content = null) {
 	extract(shortcode_atts(array(
-		'id'	=> '',
-		'align'	=> '',
-		'width'	=> '',
-		'caption' => ''
+		'id'		=> '',
+		'align'		=> '',
+		'width'		=> '',
+		'caption' 	=> ''
 	), $attr));
 	
 	if ( 1 > (int) $width || empty($caption) )
