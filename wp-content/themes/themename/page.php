@@ -8,20 +8,10 @@
 <?php get_template_part('head'); ?> 
 <body <?php body_class(); ?>>
 <?php get_header(); ?> 
-
-	<section id="posts"><?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?> 
 	
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<h2><?php the_title(); ?></h2>
-			<?php the_content('Read More &raquo;'); ?>
-		</article>
-		
-	<?php endwhile; else : ?> 
-	
-		<h2>Sorry...</h2>
-		<p>No posts were found.</p>
-	
-	<?php endif; ?></section>
+	<section id="content">
+		<?php get_template_part('loop', 'page'); ?>
+	</section>
 
 <?php get_footer(); ?> 
 </body>
