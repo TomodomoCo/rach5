@@ -5,7 +5,7 @@
 //    Rach5
 //    http://labs.vanpattenmedia.com/projects/rach5/
 //
-//    Functions: Customize wp-admin    
+//    Functions: Customize wp-admin
 //
 // ------------------------------------------------------------ //
 

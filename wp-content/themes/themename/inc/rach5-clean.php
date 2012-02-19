@@ -5,7 +5,7 @@
 //    Rach5
 //    http://labs.vanpattenmedia.com/projects/rach5/
 //
-//    Functions: Cleaning    
+//    Functions: Clean the source code
 //
 // ------------------------------------------------------------ //
 
