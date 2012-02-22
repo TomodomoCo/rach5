@@ -9,7 +9,9 @@ sass_dir		= "sass"
 images_dir		= "img"
 javascripts_dir	= "js"
 
-remote_theme_dir_absolute = '/path/to/website.tld/wp-content/themes/themename'
+# WordPress paths: No trailing slashes
+wordpress_root	= '/path/to/wordpress'
+rel_theme_path 	= '/wp-content/themes/themename'
 
 # Development
 output_style	= :expanded
@@ -31,7 +33,7 @@ on_stylesheet_saved do |filename|
 	$local_path_to_css_file = css_dir + '/' + File.basename(filename)
 	
 	Net::SFTP.start( sftp_host, sftp_user ) do |sftp|
-		sftp.upload! $local_path_to_css_file, remote_theme_dir_absolute + '/' + css_dir + '/' + File.basename(filename)
+		sftp.upload! $local_path_to_css_file, wordpress_root + rel_theme_path + '/' + css_dir + '/' + File.basename(filename)
 	end
 	puts ">>> File uploaded."
 end
