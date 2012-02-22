@@ -63,26 +63,29 @@ function rach5_root_relative_url($input) {
 }
 
 if (!is_admin() && !in_array($GLOBALS['pagenow'], array('wp-login.php', 'wp-register.php'))) {
-	add_filter('bloginfo_url', 'rach5_root_relative_url');
-	add_filter('theme_root_uri', 'rach5_root_relative_url');
-	add_filter('stylesheet_directory_uri', 'rach5_root_relative_url');
-	add_filter('template_directory_uri', 'rach5_root_relative_url');
-	add_filter('script_loader_src', 'rach5_fix_duplicate_subfolder_urls');
-	add_filter('style_loader_src', 'rach5_fix_duplicate_subfolder_urls');
-	add_filter('plugins_url', 'rach5_root_relative_url');
-	add_filter('the_permalink', 'rach5_root_relative_url');
-	add_filter('wp_list_pages', 'rach5_root_relative_url');
-	add_filter('wp_list_categories', 'rach5_root_relative_url');
-	add_filter('wp_nav_menu', 'rach5_root_relative_url');
-	add_filter('the_content_more_link', 'rach5_root_relative_url');
-	add_filter('the_tags', 'rach5_root_relative_url');
-	add_filter('get_pagenum_link', 'rach5_root_relative_url');
-	add_filter('get_comment_link', 'rach5_root_relative_url');
-	add_filter('month_link', 'rach5_root_relative_url');
-	add_filter('day_link', 'rach5_root_relative_url');
-	add_filter('year_link', 'rach5_root_relative_url');
-	add_filter('tag_link', 'rach5_root_relative_url');
-	add_filter('the_author_posts_link', 'rach5_root_relative_url');
+	$tags = array(
+		'bloginfo_url',
+		'theme_root_uri',
+		'stylesheet_directory_uri',
+		'template_directory_uri',
+		'script_loader_src',
+		'style_loader_src',
+		'plugins_url',
+		'the_permalink',
+		'wp_list_pages',
+		'wp_list_categories',
+		'wp_nav_menu',
+		'the_content_more_link',
+		'the_tags',
+		'get_pagenum_link',
+		'get_comment_link',
+		'month_link',
+		'day_link',
+		'year_link',
+		'tag_link',
+		'the_author_posts_link'
+	);
+	add_filters($tags, 'rach5_root_relative_url');
 }
 
 function rach5_root_relative_attachment_urls() {
