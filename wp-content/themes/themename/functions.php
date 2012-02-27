@@ -16,7 +16,6 @@ require_once locate_template('/inc/rach5-admin.php');
 require_once locate_template('/inc/rach5-clean.php');
 require_once locate_template('/inc/rach5-htaccess.php');
 require_once locate_template('/inc/rach5-html5.php');
-require_once locate_template('/inc/rach5-whitelabel.php');
 
 // ------------------------------------------------------------ //
 //
