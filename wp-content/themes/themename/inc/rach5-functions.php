@@ -56,22 +56,6 @@ function copyright($copystart) {
 	}
 }
 
-// Useful word trim function
-function word_trim($string, $count, $ellipsis = FALSE){
-	$words = explode(' ', $string);
-	if (count($words) > $count){
-		array_splice($words, $count);
-		$string = implode(' ', $words);
-		if (is_string($ellipsis)){
-			$string .= $ellipsis;
-		}
-		elseif ($ellipsis){
-			$string .= '...';
-		}
-	}
-	return $string;
-}
-
 // A nice tab function, if you like clean source like me.
 function tab($count=1){
     for($x = 1; $x <= $count; $x++){
@@ -98,7 +82,7 @@ function rach5_get_the_excerpt() {
 		$stripped_content = strip_tags($content);
 		
 		// 3. Trim words from $content
-		$trimmed_content = word_trim($stripped_content, 20, true);
+		$trimmed_content = wp_trim_words($stripped_content, 20);
 		
 		// 4. Here's your excerpt!
 		$rach5_excerpt = str_replace("\n", ' ', $trimmed_content);
