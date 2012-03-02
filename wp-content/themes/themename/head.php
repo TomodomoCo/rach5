@@ -28,20 +28,6 @@
 		wp_head();
 	?>
 	
-	<?php /* OpenGraph */ 
-	?><meta property="og:locale" content="en_US">
-	<meta property="fb:admins" content="<?php /* Facebook admin ID */ ?>">
-	<meta property="og:title" content="<?php wp_title(''); ?>">
-	<meta property="og:url" content="<?php echo get_permalink(); ?>">
-	<meta property="og:site_name" content="<?php bloginfo('name'); ?>">
-	<meta property="og:type" content="<?php if ( is_single() ) { echo 'article'; } else { echo 'website'; } ?>">
-	<meta property="og:description" content="<?php if ( !is_front_page() ) :
-		echo rach5_get_the_excerpt();
-	else : 
-		echo 'Long description of site.';
-	endif; ?>">
-	<meta property="og:image" content="<?php echo home_url(); bloginfo('template_directory'); ?>/img/opengraph.png">
-	
 	<?php /* Google Analytics */ 
 	?><script type="text/javascript">
 		var _gaq = _gaq || [];
