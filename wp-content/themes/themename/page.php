@@ -10,7 +10,7 @@
 <?php get_header(); ?> 
 	
 	<section id="content">
-		<?php get_template_part('loop', 'page'); ?>
+		<?php get_template_part('loop', 'page'); ?> 
 	</section>
 
 <?php get_footer(); ?> 

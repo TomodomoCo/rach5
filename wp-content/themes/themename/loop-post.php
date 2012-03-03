@@ -17,9 +17,9 @@
 			} else {
 				next_post_link('<div class="next-posts">%link</div>','%title &raquo;');
 				previous_post_link('<div class="prev-posts">%link</div>','&laquo; %title');
-			} ?>
+			} ?> 
 		</section>
 	<?php else : ?> 
 		<h2>Sorry...</h2>
 		<p>No posts were found.</p>
-	<?php endif; ?>
+	<?php endif; ?> 
