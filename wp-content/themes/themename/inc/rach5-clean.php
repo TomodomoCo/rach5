@@ -32,10 +32,10 @@ function strip_page_from_body_class($classes, $class) {
 add_filter("body_class", "strip_page_from_body_class", 10, 2);
 
 // remove WordPress version from RSS feeds
-function disable_version() {
+function rach5_disable_version() {
 	return '';
 }
-add_filter('the_generator','disable_version');
+add_filter('the_generator','rach5_disable_version');
 
 
 // ------------------------------------------------------------ //
