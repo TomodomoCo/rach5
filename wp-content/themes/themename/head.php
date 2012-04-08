@@ -11,7 +11,7 @@
 	stylesheet_link_tag('/global.css', true, 0, true);
 		
 	// Formalize
-	stylesheet_link_tag('http://cdn.vanpattenmedia.com/js/libs/formalize/css/formalize.css', false, 1, false); ?>
+	stylesheet_link_tag('http://cdn.vanpattenmedia.com/js/libs/formalize/1.2/css/formalize.css', false, 1, false); ?>
 	
 	<?php /* Mobile viewport lock */
 	?><meta name="viewport" content="width=device-width; initial-scale=1.0">
@@ -22,11 +22,11 @@
 	<![endif]-->
 	
 	<?php /* JavaScript */
-	?><script type="text/javascript" src="http://cdn.vanpattenmedia.com/js/libs/LAB.min.js"></script>
+	?><script type="text/javascript" src="http://cdn.vanpattenmedia.com/js/libs/labjs/2.0.3/LAB.min.js"></script>
 	<script type="text/javascript">
 		$LAB
 		.script('http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js').wait()
-		.script('http://cdn.vanpattenmedia.com/js/libs/formalize/js/jquery.formalize.min.js').wait()
+		.script('http://cdn.vanpattenmedia.com/js/libs/formalize/1.2/js/jquery.formalize.min.js').wait()
 		.script('<?php bloginfo('template_directory'); ?>/js/script.js').wait();
 	</script>
 	
