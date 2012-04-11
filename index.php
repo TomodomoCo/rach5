@@ -7,11 +7,21 @@
 <?php get_template_part('head'); ?> 
 <body <?php body_class(); ?>>
 <?php get_header(); ?> 
-
+	
 	<section id="content">
-		<?php get_template_part('loop', 'post'); ?> 
+		<?php
+		
+		if ( is_front_page() ) {
+			get_template_part('frontpage');
+		} elseif ( is_page() ) {
+			get_template_part('loop', 'page');
+		} else {
+			get_template_part('loop', 'post');
+		}
+		
+		?> 
 	</section>
 
-<?php get_footer(); ?> 
+<?php get_footer(); ?>
 </body>
 </html>

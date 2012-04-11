@@ -9,7 +9,7 @@
 	
 	// Global Stylesheet
 	stylesheet_link_tag('/global.css', true, 0, true);
-		
+	
 	// Formalize
 	stylesheet_link_tag('http://cdn.vanpattenmedia.com/js/libs/formalize/1.2/css/formalize.css', false, 1, false); ?>
 	
@@ -22,11 +22,11 @@
 	<![endif]-->
 	
 	<?php /* JavaScript */
-	?><script type="text/javascript" src="http://cdn.vanpattenmedia.com/js/libs/labjs/2.0.3/LAB.min.js"></script>
+	?><script type="text/javascript" src="//cdn.vanpattenmedia.com/js/libs/labjs/2.0.3/LAB.min.js"></script>
 	<script type="text/javascript">
 		$LAB
-		.script('http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js').wait()
-		.script('http://cdn.vanpattenmedia.com/js/libs/formalize/1.2/js/jquery.formalize.min.js').wait()
+		.script('//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js').wait()
+		.script('//cdn.vanpattenmedia.com/js/libs/formalize/1.2/js/jquery.formalize.min.js').wait()
 		.script('<?php bloginfo('template_directory'); ?>/js/script.js').wait();
 	</script>
 	
@@ -40,8 +40,7 @@
 	<script type="text/javascript">
 		var _gaq = _gaq || [];
 		
-		_gaq.push(['_setAccount', 'UA-575101-19']);
-		_gaq.push(['_setDomainName', 'vanpattenmedia.com']);
+		_gaq.push(['_setAccount', 'UA-XXXXXX-XX']);
 		_gaq.push(['_trackPageview']);
 		
 		(function() {

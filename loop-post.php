@@ -1,5 +1,5 @@
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?> 
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?>>
 			<header>
 				<h2 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 				<p>Posted at <time class="updated" datetime="<?php the_modified_time('c'); ?>" pubdate><?php the_time(); ?> on <?php the_time(get_option('date_format')); ?></time></p>
@@ -10,8 +10,8 @@
 			</div>
 		</article><?php endwhile; ?> 
 		
-		<section class="posts-nav">
-			<?php if (is_single()) {
+		<section class="posts-nav clearfix">
+			<?php if (!is_single()) {
 				echo '<div class="prev-posts">'; next_posts_link( '&laquo; Older Posts' ); echo '</div>';
 				echo '<div class="next-posts">'; previous_posts_link( 'Newer Posts &raquo;' ); echo '</div>';
 			} else {

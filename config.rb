@@ -25,8 +25,8 @@ line_comments	= true
 # relative_assets = true
 
 # Connection Details
-sftp_host = 'website.tld'
-sftp_user = 'username'
+sftp_host = ''
+sftp_user = ''
 
 # Upload
 on_stylesheet_saved do |filename|

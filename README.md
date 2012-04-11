@@ -5,7 +5,14 @@
 
 Rach5 provides a set of "sensible defaults" that make it faster to jump into developing a custom WordPress website, and get right out of your way as quickly as possible by not imposing any (well, almost any) style decisions. Rach5 uses HTML5, Ruby and Compass, and a mix of WordPress native and custom functions that make theme development fast and fun.
 
-For up-to-date documentation, visit the Rach5 website at <a href="http://labs.vanpattenmedia.com/projects/rach5/">Van Patten Media Labs</a> or the <a href="https://github.com/vanpattenmedia/rach5/wiki">Github Wiki</a> for the project.
+### 1.0
+Rach5 has finally hit 1.0! What does that mean for you?
+
+*   All the functions have been removed. They will now be maintained in a separate project: `rach5-plugin`.
+*   The project has been condensed to only include the theme directory to simplify management via version control. The plugin will be built to handle maintenance and offer humans.txt/robots.txt defaults.
+*   In the interest of maintainability and simplicity, I have removed several template files and condensed them down to loop templates that are called from conditionals in `index.php`. This logic is not typical for WordPress, but is a major part of bringing <a href="https://en.wikipedia.org/wiki/DRY">DRY</a> to Rach5.
+
+For up-to-date documentation, visit the Rach5 website at <a href="http://www.vanpattenmedia.com/projects/rach5/">Van Patten Media Labs</a> or the <a href="https://github.com/vanpattenmedia/rach5/wiki">Github Wiki</a> for the project.
 
 ### Getting started
 It's easy to <a href="https://github.com/vanpattenmedia/rach5/wiki/Getting-Started">get started with Rach5</a>! The full details are available at the wiki.
