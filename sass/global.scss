@@ -1,17 +1,22 @@
-// Fonts
-// @import "includes/fonts";
+// Your imports
+@import "includes/fonts";
+@import "includes/definitions";
 
 // Rach5 imports
 @import "includes/rach5/definitions";
-@import "includes/rach5/fixes";
 
 // Compass imports
 @import "rgbapng";
+@import "compass/reset";
 @import "compass/css3";
 @import "compass/typography";
 
-// Your imports
-@import "includes/definitions";
+// Delete if using Skeleton
+.clearfix:before, .clearfix:after {
+	content: "\0020"; display: block; height: 0; visibility: hidden;
+}
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
 
 /*
  *
@@ -20,7 +25,7 @@
  */
 
 body {
-	
+
 }
 
 
