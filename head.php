@@ -1,30 +1,15 @@
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0">
 	<title><?php wp_title(''); ?></title>
 
-	<?php /* humans.txt credits */
-	?><link rel="author" href="/humans.txt">
+	<link rel="author" href="/humans.txt">
+	<link rel="stylesheet" type="text/css" href="/assets/stylesheets/style.css">
 
-	<?php /* CSS */
-	?><link rel="stylesheet" type="text/css" href="/global.css">
-	<link rel="stylesheet" type="text/css" href="http://cdn.vanpattenmedia.com/js/libs/formalize/1.2/css/formalize.css">
-
-	<?php /* Mobile viewport lock */
-	?><meta name="viewport" content="width=device-width; initial-scale=1.0">
-
-	<?php /* HTML5 Shiv for <IE9 */
-	?><!--[if lt IE 9]>
-	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script type="text/javascript" src="/assets/javascripts/script.js"></script>
+	<!--[if lt IE 9]>
+	<script src="/assets/javascripts/ie.js"></script>
 	<![endif]-->
-
-	<?php /* JavaScript */
-	?><script type="text/javascript" src="//cdn.vanpattenmedia.com/js/libs/labjs/2.0.3/LAB.min.js"></script>
-	<script type="text/javascript">
-		$LAB
-		.script('//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js').wait()
-		.script('//cdn.vanpattenmedia.com/js/libs/formalize/1.2/js/jquery.formalize.min.js').wait()
-		.script('<?php bloginfo('template_directory'); ?>/js/script.js').wait();
-	</script>
 
 	<?php /* WordPress head injection */
 	wp_head(); ?>
