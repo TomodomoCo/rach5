@@ -12,7 +12,7 @@ if ( !function_exists('rach5_info') ) {
 
 /*
  *
- * Website.tld custom functions
+ * Custom functions
  *
  */
 
@@ -22,13 +22,39 @@ function rach5_setup() {
 	add_editor_style('css/editor-style.css?' . time());
 
 	// Post thumbnails
-	// add_theme_support('post-thumbnails');
-
-	// use /assets as the default upload path
-	// update_option('upload_path', 'assets');
+	add_theme_support('post-thumbnails');
 
 	// Use wrappers by default now
 	add_rach5_support('wrappers');
+
+	/*
+	// Register nav menus
+	$menus = array(
+		'nav-header' => 'Header',
+	);
+	register_nav_menus( $menus );
+	*/
+
+	/*
+	// Register widget areas
+	$args = array(
+		'name'          => 'Main Sidebar',
+		'id'            => 'main-sidebar',
+		'before_widget' => '<aside id="%1$s" class="widget box %2$s">',
+		'after_widget'  => '</aside>',
+	);
+	register_sidebar( $args );
+	*/
+
+	/*
+	// Register widgets
+	include 'inc/widgets/RfWidget.php';
+
+	function rf_register_widgets() {
+		register_widget('RfWidget');
+	}
+	add_action( 'widgets_init', 'rf_register_widgets' );
+	*/
 }
 add_action('after_setup_theme', 'rach5_setup');
 
