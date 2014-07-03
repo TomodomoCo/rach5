@@ -3,10 +3,12 @@
 if ( !function_exists('rach5_info') ) {
 	function no_rach5() {
 		echo '<div class="error">';
-		echo '<p>', sprintf(__('You need to <a href="%s">install the Rach5 plugin</a>.', 'rach5'), admin_url('plugin-install.php?tab=upload') ), '</p>';
+		echo '<p>', sprintf(__('You need to <a href="%s">install the <strong>rach5-helper</strong> plugin</a>.', 'rach5'), admin_url('plugin-install.php?tab=upload') ), '</p>';
 		echo '</div>';
 	}
 	add_action('admin_notices', 'no_rach5');
+	
+	return;
 }
 
 
